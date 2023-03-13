@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6hEH9retSgpERYrryGMm/S9XV5vgwD1SfwnB6KVg5RM=",
+  "Hash": "MqO+IjMDJgEFHgceQV/HqesIc4+DMg2TzeP9U9ffKH0=",
   "Source": "Vote with Your Wallet",
   "BasePath": "_content/Vote with Your Wallet",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/css/style.css",
+      "SourceId": "Vote with Your Wallet",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/",
+      "BasePath": "_content/Vote with Your Wallet",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/style.css"
     },
     {
       "Identity": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/favicon.ico",

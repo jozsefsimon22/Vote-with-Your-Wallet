@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Browse Causes";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="text-center">
+        <h1>Browse Causes</h1>
+    </div>
+    <div>
+        <input class="form-control me-sm-2" type="search" style=" width:100%; height:50px; text-align:center" placeholder="SEARCH" />
+    </div>
+    <div id="myDiv" style="padding: 10px; width: 315px; width: 300px; display: inline-block; vertical-align: top; padding: 10px;">
+    </div>
+    <div id="causes"></div>
+
+    <script>
+        // Mock data of causes
+        let causes = [
+            {
+                title: "Stop Creative Tax Avoidance",
+                creator: "John Doe",
+                description: "This cause is to bring awareness to the issue of creative tax avoidance and encourage businesses to pay their fair share of taxes.",
+                signatures: 254,
+                dateCreated: "March 1, 2023"
+            },
+            {
+                title: "Fight for Fair Employment Practices",
+                creator: "Jane Smith",
+                description: "This cause is to raise awareness about unfair employment practices and encourage businesses to treat their employees with respect and dignity.",
+                signatures: 341,
+                dateCreated: "March 5, 2023"
+            },
+            {
+                title: "Demand Environmental Responsibility",
+                creator: "Sam Lee",
+                description: "This cause is to call attention to the environmental impact of businesses and demand that they take responsibility for their actions and reduce their carbon footprint.",
+                signatures: 157,
+                dateCreated: "March 8, 2023"
+            },
+        ];
+
+        var target = $("#causes");
+
+        $(document).ready(function () {
+            addCauses();
+        });
+
+        function addCauses() {
+            for (var i = 0; i < causes.length; i++) {
+                target.append(
+                    "<div>" +
+                    "<h1>Cause: " + causes[i].title + "</h1>" +
+                    "<p>Creator: "  + causes[i].creator + "</p>" + 
+                    "<p>Description: " + causes[i].description + "</p>" +
+                    "<p>Signatures: " + causes[i].signatures + "</p>" + 
+                    "<p>Date Created: " + causes[i].dateCreated + "</p>" + 
+                    "<div>" 
+                )
+            }
+
+        }</script>
+</body>
+</html>

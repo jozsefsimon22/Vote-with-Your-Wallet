@@ -1,20 +1,48 @@
 ﻿<Properties StartupConfiguration="{62E4AE2F-6266-463D-9896-8F176EE240F6}|http">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Vote_220with_220Your_220Wallet FirstBuild="True" PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Vote_220with_220Your_220Wallet PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Vote with Your Wallet/Views/Home/Index.cshtml">
+    <Files>
+      <File FileName="Vote with Your Wallet/Views/Home/Index.cshtml" Line="26" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Vote with Your Wallet" expanded="True" selected="True">
-            <Node name="Vote with Your Wallet" expanded="True" />
+          <Node name="Vote with Your Wallet" expanded="True">
+            <Node name="Vote with Your Wallet" expanded="True">
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+                <Node name="lib" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="Vote with Your Wallet" expanded="True">
+            <Node name="Vote with Your Wallet" expanded="True" selected="True">
+              <Node name="Vote_with_Your_Wallet" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

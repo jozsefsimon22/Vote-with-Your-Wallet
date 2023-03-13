@@ -8,4 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <Content Remove="Views\Home\Browse-Cause.cshtml" />
+  </ItemGroup>
 </Project>
