@@ -12,11 +12,13 @@
         <h1>Browse Causes</h1>
     </div>
     <div>
-        <input class="form-control me-sm-2" type="search" style=" width:100%; height:50px; text-align:center" placeholder="SEARCH" />
+        <input id="search-input" class="form-control me-sm-2" type="search" style=" width:100%; height:50px; text-align:center" placeholder="SEARCH" />
     </div>
-    <div id="myDiv" style="padding: 10px; width: 315px; width: 300px; display: inline-block; vertical-align: top; padding: 10px;">
+    <div id="causes-list">
+        <div id="cause" >
+
+        </div>
     </div>
-    <div id="causes"></div>
 
     <script>
         // Mock data of causes
@@ -44,25 +46,64 @@
             },
         ];
 
-        var target = $("#causes");
+        // jQuery variables
+        var target = $("#cause");
+        var search_input = $("#search-input");
 
+        // Calling functions 
         $(document).ready(function () {
             addCauses();
         });
 
+        search_input.keyup(function(){
+            search();
+        })
+
+        // Displaying causes from the array
         function addCauses() {
             for (var i = 0; i < causes.length; i++) {
                 target.append(
-                    "<div>" +
+                    "<div id='cause-'" + i + " style='border-radius: 5px; margin-top: 50px; background-color: #A9BDBD; padding: 10px; color: white'>" +
                     "<h1>Cause: " + causes[i].title + "</h1>" +
                     "<p>Creator: "  + causes[i].creator + "</p>" + 
                     "<p>Description: " + causes[i].description + "</p>" +
                     "<p>Signatures: " + causes[i].signatures + "</p>" + 
                     "<p>Date Created: " + causes[i].dateCreated + "</p>" + 
+                    "<button type=\"button\" class= \"btn btn-primary\" onclick=\"signCause(" + i + ")\">Sign<\/button>&nbsp" +
+                    "<button type=\"button\" class= \"btn btn-secondary\" > Share <\/button>" +
                     "<div>" 
                 )
             }
+        }
 
-        }</script>
+        function signCause(index) {
+            causes[index].signatures++;
+            target.empty();
+            addCauses();
+        }
+
+        
+        // Search function
+         function search() {
+            var search_term = search_input.val().toLowerCase();
+            target.empty();
+            for (var i = 0; i < causes.length; i++) {
+                if (causes[i].title.toLowerCase().includes(search_term) || causes[i].description.toLowerCase().includes(search_term)) {
+                    target.append(
+                    "<div style='border-radius: 5px; margin-top: 50px; background-color: #A9BDBD; padding: 10px; color: white'>" +
+                    "<h1>Cause: " + causes[i].title + "</h1>" +
+                    "<p>Creator: "  + causes[i].creator + "</p>" + 
+                    "<p>Description: " + causes[i].description + "</p>" +
+                    "<p>Signatures: " + causes[i].signatures + "</p>" + 
+                    "<p>Date Created: " + causes[i].dateCreated + "</p>" + 
+                    "<button type=\"button\" class= \"btn btn-primary\" onclick=\"signCause(" + i + ")\">Sign<\/button>&nbsp" +
+                    "<button type=\"button\" class= \"btn btn-secondary\" > Share <\/button>" +
+                    "<div>" 
+                    )
+                }
+            }
+        }
+
+        </script>
 </body>
 </html>
