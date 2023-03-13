@@ -77,9 +77,16 @@
         }
 
         function signCause(index) {
-            causes[index].signatures++;
-            target.empty();
-            addCauses();
+            if (!search_input.val()){
+                causes[index].signatures++;
+                target.empty();
+                addCauses();
+            }
+            else {
+                causes[index].signatures++;
+                target.empty();
+                search();
+            }
         }
 
         
