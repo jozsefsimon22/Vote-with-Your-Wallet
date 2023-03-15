@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/Vote with Your Wallet.props" />
+</Project>

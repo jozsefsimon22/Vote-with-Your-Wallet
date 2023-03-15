@@ -1,13 +1,17 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{62E4AE2F-6266-463D-9896-8F176EE240F6}|http">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Vote_220with_220Your_220Wallet PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Vote with Your Wallet/Views/Home/BrowseCause.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Vote with Your Wallet/wwwroot/js/login.js">
     <Files>
-      <File FileName="Vote with Your Wallet/Controllers/HomeController.cs" Line="17" Column="6" IsPinned="True" />
-      <File FileName="Vote with Your Wallet/Views/Home/Index.cshtml" Line="5" Column="1" />
-      <File FileName="Vote with Your Wallet/Views/Home/Browse-Cause.html" Line="23" Column="13" />
+      <File FileName="Vote with Your Wallet/Controllers/HomeController.cs" Line="15" Column="1" IsPinned="True" />
+      <File FileName="Vote with Your Wallet/Views/Account/Login.cshtml" Line="4" Column="12" />
+      <File FileName="Vote with Your Wallet/Views/Home/BrowseCause.cshtml" Line="51" Column="44" />
+      <File FileName="Vote with Your Wallet/Views/Shared/_Layout.cshtml" Line="9" Column="33" />
+      <File FileName="Vote with Your Wallet/wwwroot/js/login.js" Line="9" Column="26" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,8 +27,11 @@
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
-                <Node name="js" expanded="True" />
+                <Node name="js" expanded="True">
+                  <Node name="login.js" selected="True" />
+                </Node>
               </Node>
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>

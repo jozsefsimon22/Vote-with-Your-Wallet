@@ -28,18 +28,17 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="BrowseCause">Browse Causes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Create a Cause" asp-action="Privacy">Create a Cause</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="CreateCause">Create a Cause</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="My Causes" asp-action="Privacy">My Causes</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">My Causes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="My Signatures" asp-action="Privacy">My Signatures</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">My Signatures</a>
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-sm-2" type="search" placeholder="Search">
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                        <a class="btn btn-secondary my-2 my-sm-0" href="@Url.Action("Login", "Home")">Login</a>
                     </form>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KI4lf7GyyhGYL7B+Ts64YUATmLOeb5TQzxV1WByPDWE=",
+  "Hash": "Jf1aoaMZDgI3p6nDObmhawZeNHTFTq7vHzthIxtz7Wk=",
   "Source": "Vote with Your Wallet",
   "BasePath": "_content/Vote with Your Wallet",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Debug/net7.0/scopedcss/bundle/Vote with Your Wallet.styles.css",
+      "Identity": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Release/net7.0/scopedcss/bundle/Vote with Your Wallet.styles.css",
       "SourceId": "Vote with Your Wallet",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Debug/net7.0/scopedcss/bundle/",
+      "ContentRoot": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Release/net7.0/scopedcss/bundle/",
       "BasePath": "_content/Vote with Your Wallet",
       "RelativePath": "Vote with Your Wallet.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Debug/net7.0/scopedcss/bundle/Vote with Your Wallet.styles.css"
+      "OriginalItemSpec": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Release/net7.0/scopedcss/bundle/Vote with Your Wallet.styles.css"
     },
     {
-      "Identity": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Debug/net7.0/scopedcss/projectbundle/Vote with Your Wallet.bundle.scp.css",
+      "Identity": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Release/net7.0/scopedcss/projectbundle/Vote with Your Wallet.bundle.scp.css",
       "SourceId": "Vote with Your Wallet",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Debug/net7.0/scopedcss/projectbundle/",
+      "ContentRoot": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Release/net7.0/scopedcss/projectbundle/",
       "BasePath": "_content/Vote with Your Wallet",
       "RelativePath": "Vote with Your Wallet.bundle.scp.css",
       "AssetKind": "All",
@@ -48,7 +48,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Debug/net7.0/scopedcss/projectbundle/Vote with Your Wallet.bundle.scp.css"
+      "OriginalItemSpec": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Release/net7.0/scopedcss/projectbundle/Vote with Your Wallet.bundle.scp.css"
     },
     {
       "Identity": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/css/browse_causes.css",

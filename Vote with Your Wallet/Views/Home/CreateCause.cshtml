@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Create Causes";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/create_cause.css">
+</head>
+<body>
+    <div id="form_box">
+        <div class="text-center">
+            <h1>Create Causes</h1>
+            <hr />
+        </div>
+        <form method="post">
+            <div class="mb-3">
+                <label for="Cause">Cause</label>
+                <input id="Cause" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label for="case_description">Description</label>
+                <div class="input-group">
+                    <textarea id="case_description"
+                              class="form-control"
+                              aria-label="Case Description"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+
+
+    <script></script>
+</body>
+</html>

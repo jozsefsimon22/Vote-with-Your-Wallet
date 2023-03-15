@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Vote with Your Wallet/1.0.0": {
+        "runtime": {
+          "Vote with Your Wallet.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Vote with Your Wallet/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

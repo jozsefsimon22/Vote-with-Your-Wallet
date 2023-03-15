@@ -1,0 +1,28 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/login.css">
+</head>
+<body>
+    <div class="container login">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input id="username" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                </div>
+                <button id ="login-btn" type="submit" class="btn btn-primary login-btn">Login</button>
+                <button type="submit" class="btn btn-secondary register-btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="~/js/login.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "Files": [
     {
-      "Id": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Debug/net7.0/scopedcss/projectbundle/Vote with Your Wallet.bundle.scp.css",
+      "Id": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Release/net7.0/scopedcss/projectbundle/Vote with Your Wallet.bundle.scp.css",
       "PackagePath": "staticwebassets/Vote with Your Wallet.bundle.scp.css"
     },
     {
@@ -273,19 +273,19 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Vote with Your Wallet.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.Vote with Your Wallet.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.Vote with Your Wallet.props",
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.build.Vote with Your Wallet.props",
       "PackagePath": "build\\Vote with Your Wallet.props"
     },
     {
-      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Vote with Your Wallet.props",
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildMultiTargeting.Vote with Your Wallet.props",
       "PackagePath": "buildMultiTargeting\\Vote with Your Wallet.props"
     },
     {
-      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Vote with Your Wallet.props",
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildTransitive.Vote with Your Wallet.props",
       "PackagePath": "buildTransitive\\Vote with Your Wallet.props"
     }
   ],
