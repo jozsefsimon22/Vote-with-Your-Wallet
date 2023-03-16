@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rT5CkVMHJOMiyBTUeEodpKR4W7t6tyCR5+2DklnchsA=",
+  "Hash": "XoJAmeq6ZSMfEvEIu1/5XYcpjyPrsOGxZoxAyG1xB4M=",
   "Source": "Vote with Your Wallet",
   "BasePath": "_content/Vote with Your Wallet",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/Debug/net7.0/scopedcss/projectbundle/Vote with Your Wallet.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/.DS_Store",
+      "SourceId": "Vote with Your Wallet",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/",
+      "BasePath": "_content/Vote with Your Wallet",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/css/browse_causes.css",
@@ -1205,6 +1222,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/main.png",
+      "SourceId": "Vote with Your Wallet",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/",
+      "BasePath": "_content/Vote with Your Wallet",
+      "RelativePath": "main.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/main.png"
     }
   ]
 }

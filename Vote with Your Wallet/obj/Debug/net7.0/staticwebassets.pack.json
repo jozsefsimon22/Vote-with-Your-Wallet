@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/Vote with Your Wallet.bundle.scp.css"
     },
     {
+      "Id": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/css/browse_causes.css",
       "PackagePath": "staticwebassets/css/browse_causes.css"
     },
@@ -275,6 +279,10 @@
     {
       "Id": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/wwwroot/main.png",
+      "PackagePath": "staticwebassets/main.png"
     },
     {
       "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Vote with Your Wallet.Microsoft.AspNetCore.StaticWebAssets.props",
