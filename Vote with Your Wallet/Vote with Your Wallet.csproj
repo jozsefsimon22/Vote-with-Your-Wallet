@@ -11,5 +11,6 @@
   <ItemGroup>
     <Content Remove="Views\Home\Browse-Cause.cshtml" />
     <Content Remove="Views\Account\Login.cshtml" />
+    <Content Remove="Views\Home\ByCauses.cshtml" />
   </ItemGroup>
 </Project>

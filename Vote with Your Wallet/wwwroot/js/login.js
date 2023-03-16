@@ -10,6 +10,9 @@ var users = [
     }
 ];
 
+// Making the array accessible from other files
+module.exports = users;
+
 // Attach an event listener to the login button
 $("#login-btn").click(function (event) {
     event.preventDefault(); // Prevent the form from submitting

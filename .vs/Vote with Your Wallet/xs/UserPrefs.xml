@@ -1,17 +1,21 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{62E4AE2F-6266-463D-9896-8F176EE240F6}|http">
+﻿<Properties StartupConfiguration="{62E4AE2F-6266-463D-9896-8F176EE240F6}|http" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Vote_220with_220Your_220Wallet PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Vote with Your Wallet/wwwroot/js/login.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Vote with Your Wallet/wwwroot/js/browse_causes.js">
     <Files>
       <File FileName="Vote with Your Wallet/Controllers/HomeController.cs" Line="15" Column="1" IsPinned="True" />
-      <File FileName="Vote with Your Wallet/Views/Account/Login.cshtml" Line="4" Column="12" />
-      <File FileName="Vote with Your Wallet/Views/Home/BrowseCause.cshtml" Line="51" Column="44" />
-      <File FileName="Vote with Your Wallet/Views/Shared/_Layout.cshtml" Line="9" Column="33" />
-      <File FileName="Vote with Your Wallet/wwwroot/js/login.js" Line="9" Column="26" NotebookId="1" />
+      <File FileName="Vote with Your Wallet/Views/Home/Login.cshtml" Line="14" Column="78" />
+      <File FileName="Vote with Your Wallet/Views/Home/CreateCause.cshtml" Line="9" Column="5" />
+      <File FileName="Vote with Your Wallet/Views/Shared/_Layout.cshtml" Line="14" Column="7" />
+      <File FileName="Vote with Your Wallet/wwwroot/css/login.css" Line="8" Column="2" />
+      <File FileName="Vote with Your Wallet/wwwroot/css/create_cause.css" Line="8" Column="2" />
+      <File FileName="Vote with Your Wallet/wwwroot/js/create_cause.js" Line="2" Column="1" />
+      <File FileName="Vote with Your Wallet/Views/Home/BrowseCause.cshtml" Line="9" Column="53" />
+      <File FileName="Vote with Your Wallet/wwwroot/css/browse_causes.css" Line="11" Column="9" />
+      <File FileName="Vote with Your Wallet/wwwroot/js/browse_causes.js" Line="43" Column="141" />
+      <File FileName="Vote with Your Wallet/Views/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,9 +31,7 @@
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
-                <Node name="js" expanded="True">
-                  <Node name="login.js" selected="True" />
-                </Node>
+                <Node name="js" expanded="True" />
               </Node>
               <Node name="appsettings.json" expanded="True" />
             </Node>
@@ -41,5 +43,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Vote_220with_220Your_220Wallet PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
