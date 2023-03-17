@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     @*<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />*@
     <link rel="stylesheet" href="~/Vote_with_Your_Wallet.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -35,7 +36,10 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <a class="btn btn-secondary my-2 my-sm-0" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
+                        <a class="btn btn-primary my-2 my-sm-0" asp-area="" asp-controller="Home" asp-action="Login">Login</a>&nbsp
+                    </form>
+                    <form class="d-flex">
+                        <a class="btn btn-secondary my-2 my-sm-0" asp-area="" asp-controller="Home" asp-action="NewUser">Register</a>
                     </form>
                 </div>
             </div>
@@ -43,12 +47,12 @@
 
     </header>
     <div class="container">
-        <main role="main" class="vh-100">
+        <main role="main" >
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top">
+    <footer class="footer border-top fixed-bottom">
         <div class="container">
             &copy; 2023 - Vote with Your Wallet -
             <a asp-area="" asp-controller="Home" asp-action="Index">About Us</a>&nbsp

@@ -35,7 +35,7 @@ var names = ["Emma Adams", "Oliver Alexander", "Sophia Allen", "Mason Anderson",
 function addCauses() {
     for (var i = 0; i < causes.length; i++) {
         target.append(
-            "<div id='cause-" + i + "' style='border-radius: 5px; margin-bottom: 50px; background-color: #A9BDBD; padding: 10px; color: white'>" +
+            "<div id='cause-" + i + "' style='border-radius: 5px; margin-top: 50px; background-color: #A9BDBD; padding: 10px; color: white'>" +
             "<h1>Cause: " + causes[i].title + "</h1>" +
             "<p>Creator: " + causes[i].creator + "</p>" +
             "<p>Description: " + causes[i].description + "</p>" +

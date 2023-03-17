@@ -1,7 +1,7 @@
 ﻿// Define a list of users with usernames and passwords
 var users = [
     {
-        username: "admin",
+        username: "admin@admin.com",
         password: "admin"
     },
     {
@@ -37,4 +37,9 @@ $("#login-btn").click(function (event) {
     } else {
         alert("Invalid username or password.");
     }
+});
+
+// Redirect the user to the register page when the register button is clicked
+$(".register-btn").click(function () {
+    window.location.href = "/NewUser.cshtml";
 });

@@ -18,11 +18,6 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
     public IActionResult BrowseCause()
     {
         return View();
@@ -39,6 +34,11 @@ public class HomeController : Controller
     }
 
     public IActionResult MyCauses()
+    {
+        return View();
+    }
+
+    public IActionResult NewUser()
     {
         return View();
     }
