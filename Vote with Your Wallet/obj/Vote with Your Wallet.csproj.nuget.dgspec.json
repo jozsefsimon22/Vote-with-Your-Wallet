@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/Vote with Your Wallet.csproj": {}
+    "C:\\Users\\nexsi\\OneDrive - Edinburgh Napier University\\MSc Computing\\Modules\\Trimester 2\\SET11105 - Programming for the Web\\Coursework\\Coursework 2\\Vote with Your Wallet\\Vote with Your Wallet\\Vote with Your Wallet.csproj": {}
   },
   "projects": {
-    "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/Vote with Your Wallet.csproj": {
+    "C:\\Users\\nexsi\\OneDrive - Edinburgh Napier University\\MSc Computing\\Modules\\Trimester 2\\SET11105 - Programming for the Web\\Coursework\\Coursework 2\\Vote with Your Wallet\\Vote with Your Wallet\\Vote with Your Wallet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/Vote with Your Wallet.csproj",
+        "projectUniqueName": "C:\\Users\\nexsi\\OneDrive - Edinburgh Napier University\\MSc Computing\\Modules\\Trimester 2\\SET11105 - Programming for the Web\\Coursework\\Coursework 2\\Vote with Your Wallet\\Vote with Your Wallet\\Vote with Your Wallet.csproj",
         "projectName": "Vote with Your Wallet",
-        "projectPath": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/Vote with Your Wallet.csproj",
-        "packagesPath": "/Users/jozsefsimon/.nuget/packages/",
-        "outputPath": "/Users/jozsefsimon/Library/CloudStorage/OneDrive-EdinburghNapierUniversity/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 1/Vote with Your Wallet/Vote with Your Wallet/obj/",
+        "projectPath": "C:\\Users\\nexsi\\OneDrive - Edinburgh Napier University\\MSc Computing\\Modules\\Trimester 2\\SET11105 - Programming for the Web\\Coursework\\Coursework 2\\Vote with Your Wallet\\Vote with Your Wallet\\Vote with Your Wallet.csproj",
+        "packagesPath": "C:\\Users\\nexsi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nexsi\\OneDrive - Edinburgh Napier University\\MSc Computing\\Modules\\Trimester 2\\SET11105 - Programming for the Web\\Coursework\\Coursework 2\\Vote with Your Wallet\\Vote with Your Wallet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jozsefsimon/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\nexsi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +39,18 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
