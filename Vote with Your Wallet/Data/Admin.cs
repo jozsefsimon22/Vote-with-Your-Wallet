@@ -3,22 +3,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Vote_with_Your_Wallet.Data
 {
-	public class Cause
-	{
-		[Required]
+    public class Admin
+    {
+        [Required]
         [Key]
-		public int ID { get; set; }
-        [Required]
-        public string CauseName { get; set; }
-        [Required]
-        public string Description { get; set; }
-        [Required]
-        public DateTime Date { get; set; }
+        public int AdminId { get; set; }
         [Required]
         [ForeignKey("User")]
         public string Username { get; set; }
         [Required]
         public User User { get; set; }
-
     }
 }

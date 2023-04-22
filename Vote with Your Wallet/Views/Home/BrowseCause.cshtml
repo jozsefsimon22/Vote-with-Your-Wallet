@@ -18,31 +18,14 @@
     </div>
     <div id="causes-list">
         <div id="cause">
-            <table class="table table-bordered" style="color: white">
-                <thead >
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Creator</th>
-                </thead>
-                <tbody>
-                    @foreach (var cause in Model)
-					{
-						<tr>
-							<td>@cause.Id</td>
-							<td>@cause.Name</td>
-							<td>@cause.Description</td>
-                            <td>@cause.UserName</td>
-                        </tr>
-					}
-                </tbody>
-            </table>
-
         </div>
     </div>
 
+    <script>
+        var causesData = @Html.Raw(Json.Serialize(Model));
+    </script>
+    <script src="/js/browse_causes.js"></script>
 
-    @*<script src="~/js/browse_causes.js"></script>*@
 
 </body>
 </html>
