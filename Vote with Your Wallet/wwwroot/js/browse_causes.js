@@ -1,5 +1,7 @@
-﻿// Mock data of causes
-let causes = [
+﻿
+
+// Mock data of causes
+/*let causes = [
     {
         title: "Stop Creative Tax Avoidance",
         creator: "John Doe",
@@ -21,7 +23,11 @@ let causes = [
         signatures: 157,
         dateCreated: "March 8, 2023"
     },
-];
+];*/
+
+// Mock data of causes from database (JSON) 
+let causes = causesData;
+console.log(causes);
 
 // jQuery variables
 var target = $("#cause");
@@ -35,12 +41,12 @@ var names = ["Emma Adams", "Oliver Alexander", "Sophia Allen", "Mason Anderson",
 function addCauses() {
     for (var i = 0; i < causes.length; i++) {
         target.append(
-            "<div id='cause-" + i + "' style='border-radius: 5px; margin-bottom: 50px; background-color: #A9BDBD; padding: 10px; color: white'>" +
-            "<h1>Cause: " + causes[i].title + "</h1>" +
-            "<p>Creator: " + causes[i].creator + "</p>" +
+            "<div id='cause-" + causes[i].id + "' style='border-radius: 5px; margin-bottom: 50px; background-color: #A9BDBD; padding: 10px; color: white'>" +
+            "<h1>Cause: " + causes[i].name + "</h1>" +
+            "<p>Creator: " + causes[i].userName + "</p>" +
             "<p>Description: " + causes[i].description + "</p>" +
-            "<p><span class='signature-toggle'>Signatures: " + causes[i].signatures + "</span><span class='signature-list'><ul class=\"listTest\">" + getSignatureList(i) + "</ul></span></p>" +
-            "<p>Date Created: " + causes[i].dateCreated + "</p>" +
+            "<p><span class='signature-toggle'>Signatures: " + "</span><span class='signature-list'><ul class=\"listTest\">" + "</ul></span></p>" +
+            "<p>Date Created: " + causes[i].date + "</p>" +
             "<div class='d-flex justify-content-between align-items-center'>" +
             "<button type=\"button\" class= \"btn btn-primary\" onclick=\"signCause(" + i + ")\">Sign<\/button>" +
             "<div class='d-flex flex-row-reverse'>" +
@@ -95,6 +101,7 @@ function addNewName() {
 
 
 function signCause(index) {
+    console.log('signCause called');
     if (!search_input.val()) {
         if ($(".listTest").is(":visible")) {
             // The toggle is on (visible)
@@ -111,7 +118,7 @@ function signCause(index) {
             addCauses();
         }
     }
-    else {      
+    else {
         if ($(".listTest").is(":visible")) {
             // The toggle is on (visible)
             causes[index].signatures++;
@@ -140,6 +147,7 @@ search_input.keyup(function () {
 
 // Search function
 function search() {
+    console.log('search called');
     var search_term = search_input.val().toLowerCase();
     target.empty();
     for (var i = 0; i < causes.length; i++) {

@@ -7,10 +7,12 @@ namespace Vote_with_Your_Wallet.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly MyDbContext _db;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, MyDbContext db)
     {
         _logger = logger;
+        _db = db;
     }
 
     public IActionResult Index()
@@ -20,7 +22,8 @@ public class HomeController : Controller
 
     public IActionResult BrowseCause()
     {
-        return View();
+        var causes = _db.Causes.ToList();
+        return View(causes);
     }
 
     public IActionResult CreateCause()

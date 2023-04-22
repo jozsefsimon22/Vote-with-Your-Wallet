@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Browse Causes";
 }
+@model List<Vote_with_Your_Wallet.Models.Cause>;
 
 <!DOCTYPE html>
 <html>
@@ -17,12 +18,14 @@
     </div>
     <div id="causes-list">
         <div id="cause">
-
         </div>
     </div>
 
+    <script>
+        var causesData = @Html.Raw(Json.Serialize(Model));
+    </script>
+    <script src="/js/browse_causes.js"></script>
 
-    <script src="~/js/browse_causes.js"></script>
 
 </body>
 </html>
