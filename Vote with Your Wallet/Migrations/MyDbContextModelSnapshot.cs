@@ -3,7 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Vote_with_Your_Wallet.Data;
+using Vote_with_Your_Wallet.Models;
 
 #nullable disable
 

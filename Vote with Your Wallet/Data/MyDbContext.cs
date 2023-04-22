@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-namespace Vote_with_Your_Wallet.Data
+namespace Vote_with_Your_Wallet.Models
 {
 	public class MyDbContext : DbContext
 	{

@@ -1,7 +1,7 @@
 ﻿
 // Add a using statement for the DbContext namespace
 using Microsoft.EntityFrameworkCore;
-using Vote_with_Your_Wallet.Data;
+using Vote_with_Your_Wallet.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);

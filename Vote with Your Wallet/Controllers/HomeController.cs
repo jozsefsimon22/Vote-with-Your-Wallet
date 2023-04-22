@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Vote_with_Your_Wallet.Data;
 using Vote_with_Your_Wallet.Models;
 
 namespace Vote_with_Your_Wallet.Controllers;
