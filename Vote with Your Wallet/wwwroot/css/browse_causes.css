@@ -18,7 +18,8 @@
     color: white;
 }
 
-.signature-toggle:hover{
+
+.signature-toggle:hover {
     cursor: pointer;
     text-decoration: underline;
 }
