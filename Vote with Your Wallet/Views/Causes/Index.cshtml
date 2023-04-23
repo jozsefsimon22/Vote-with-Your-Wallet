@@ -91,6 +91,15 @@
             <p>Creator: @causeWithSignatures.Cause.User.FirstName @causeWithSignatures.Cause.User.LastName</p>
             <p>Description: @causeWithSignatures.Cause.Description</p>
             <p>Signatures: @causeWithSignatures.SignaturesCount</p>
+            <div class="signer-names">
+                <p><strong>Signers:</strong></p>
+                <ul>
+                    @foreach (var signerName in causeWithSignatures.SignerNames)
+                    {
+                        <li>@signerName</li>
+                    }
+                </ul>
+            </div>
             <p>Date Created: @causeWithSignatures.Cause.Date.ToShortDateString()</p>
             <div class="d-flex justify-content-between align-items-center">
                 <form asp-controller="Causes" asp-action="SignCause" method="post">
