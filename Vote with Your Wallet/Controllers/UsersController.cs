@@ -60,7 +60,11 @@ namespace Vote_with_Your_Wallet.Controllers
             Response.Cookies.Append("Admin", user.IsAdmin.ToString(), options);
 
             Console.WriteLine(Request.Cookies.ToString());
-            return RedirectToAction("MyCauses", "Home"); // Redirect the user to the desired page after successful login
+            if(user.IsAdmin)
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+            return RedirectToAction("MyCauses", "Home"); // Redirect the user to the MyCauses after successful login
         }
 
         // GET: Users/Logout

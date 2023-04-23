@@ -20,7 +20,7 @@ namespace Vote_with_Your_Wallet.Controllers
         }
 
         // GET: Causes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> CausesList()
         {
             var causesWithSignatures = await _context.Causes
                 .Include(c => c.User)
@@ -188,7 +188,7 @@ namespace Vote_with_Your_Wallet.Controllers
         {
             if (string.IsNullOrEmpty(username))
             {
-                return RedirectToAction("Login", "Users");
+                return RedirectToAction("Login", "Home");
             }
 
             var user = await _context.Users.FindAsync(username);
@@ -209,7 +209,7 @@ namespace Vote_with_Your_Wallet.Controllers
             if (existingSignature != null)
             {
                 // User has already signed the cause, display an error or redirect as needed
-                return RedirectToAction("Index", "Causes"); // Redirect back to the causes list as an example
+                return RedirectToAction("CausesList", "Causes"); // Redirect back to the causes list as an example
             }
 
             var signature = new Signatures
@@ -223,7 +223,7 @@ namespace Vote_with_Your_Wallet.Controllers
             _context.Signatures.Add(signature);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Index", "Causes");
+            return RedirectToAction("CausesList", "Causes");
         }
 
 
