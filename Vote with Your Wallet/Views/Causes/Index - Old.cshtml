@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Vote_with_Your_Wallet.Models.Cause>
+
+@{
+    ViewData["Title"] = "Causes";
+}
+
+<h1>Causes</h1>
+
+<p>
+    <a class="btn btn-primary my-2 my-sm-0" asp-action="Create">Create New</a>
+</p>
+<table class="table" style="color: white">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CauseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr >
+            <td>
+                @Html.DisplayFor(modelItem => item.CauseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Username)
+            </td>
+            <td>
+                <a class="btn btn-primary my-2 my-sm-0" asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a class="btn btn-secondary my-2 my-sm-0" asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a class="btn btn-danger my-2 my-sm-0" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Vote_with_Your_Wallet.Models;
-using Vote_with_Your_Wallet.Views.Users;
+using Vote_with_Your_Wallet.ViewModels;
 
 namespace Vote_with_Your_Wallet.Controllers
 {

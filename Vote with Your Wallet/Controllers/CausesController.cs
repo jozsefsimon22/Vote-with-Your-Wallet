@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Vote_with_Your_Wallet.Models;
+using Vote_with_Your_Wallet.ViewModels;
 
 namespace Vote_with_Your_Wallet.Controllers
 {
@@ -21,8 +22,17 @@ namespace Vote_with_Your_Wallet.Controllers
         // GET: Causes
         public async Task<IActionResult> Index()
         {
-            var myDbContext = _context.Causes.Include(c => c.User);
-            return View(await myDbContext.ToListAsync());
+            var causesWithSignatures = await _context.Causes
+                .Include(c => c.User)
+                .Select(c => new CauseWithSignaturesViewModel
+                {
+                    Cause = c,
+                    SignaturesCount = _context.Signatures.Count(s => s.CauseId == c.ID),
+                    SignerNames = _context.Signatures.Where(s => s.CauseId == c.ID).Select(s => s.User.FirstName + " " + s.User.LastName).ToList()
+                })
+                .ToListAsync();
+
+            return View(causesWithSignatures);
         }
 
         // GET: Causes/Details/5
@@ -171,5 +181,51 @@ namespace Vote_with_Your_Wallet.Controllers
         {
           return (_context.Causes?.Any(e => e.ID == id)).GetValueOrDefault();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SignCause(int causeId, string username)
+        {
+            if (string.IsNullOrEmpty(username))
+            {
+                return RedirectToAction("Login", "Users");
+            }
+
+            var user = await _context.Users.FindAsync(username);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var cause = await _context.Causes.FindAsync(causeId);
+            if (cause == null)
+            {
+                return NotFound();
+            }
+
+            var existingSignature = await _context.Signatures
+                .FirstOrDefaultAsync(s => s.CauseId == causeId && s.Username == username);
+
+            if (existingSignature != null)
+            {
+                // User has already signed the cause, display an error or redirect as needed
+                return RedirectToAction("Index", "Causes"); // Redirect back to the causes list as an example
+            }
+
+            var signature = new Signatures
+            {
+                CauseId = causeId,
+                Username = username,
+                User = user,
+                Cause = cause
+            };
+
+            _context.Signatures.Add(signature);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index", "Causes");
+        }
+
+
     }
 }

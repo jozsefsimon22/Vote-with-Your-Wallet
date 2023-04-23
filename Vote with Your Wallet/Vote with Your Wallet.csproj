@@ -15,6 +15,10 @@
     <Content Remove="Views\Home\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ViewModels\CauseWithSignaturesViewModel.cs" />
+    <Content Include="ViewModels\UserDetailsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.5" />
