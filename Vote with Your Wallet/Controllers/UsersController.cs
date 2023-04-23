@@ -44,9 +44,12 @@ namespace Vote_with_Your_Wallet.Controllers
                 return View();
             }
 
-            // TODO: Implement user authentication, e.g., sign in the user and set a session or cookie
-            // For example, you can use ASP.NET Core Identity or any other authentication mechanism.
+            // Set a cookie to remember the user
+            var options = new Microsoft.AspNetCore.Http.CookieOptions();
+            options.Expires = DateTime.Now.AddSeconds(10);
+            Response.Cookies.Append("Username", user.Username, options);
 
+            Console.WriteLine(Request.Cookies.ToString());
             return RedirectToAction("MyCauses", "Home"); // Redirect the user to the desired page after successful login
         }
 
