@@ -56,6 +56,8 @@ namespace Vote_with_Your_Wallet.Controllers
             var options = new Microsoft.AspNetCore.Http.CookieOptions();
             options.Expires = DateTime.Now.AddMinutes(1);
             Response.Cookies.Append("Username", user.Username, options);
+            // Set a cookie to remember if the user is an admin
+            Response.Cookies.Append("Admin", user.IsAdmin.ToString(), options);
 
             Console.WriteLine(Request.Cookies.ToString());
             return RedirectToAction("MyCauses", "Home"); // Redirect the user to the desired page after successful login
@@ -65,6 +67,7 @@ namespace Vote_with_Your_Wallet.Controllers
         public IActionResult Logout()
         {
             Response.Cookies.Delete("Username");
+            Response.Cookies.Delete("Admin");
             return RedirectToAction("Index", "Home");
         }
 
