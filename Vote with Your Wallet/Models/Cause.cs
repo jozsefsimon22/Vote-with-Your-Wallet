@@ -19,6 +19,5 @@ namespace Vote_with_Your_Wallet.Models
         public string Username { get; set; }
         [Required]
         public User User { get; set; }
-
     }
 }
