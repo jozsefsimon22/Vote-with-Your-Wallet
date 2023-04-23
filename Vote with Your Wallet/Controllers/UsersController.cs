@@ -18,6 +18,38 @@ namespace Vote_with_Your_Wallet.Controllers
             _context = context;
         }
 
+        // GET: Users/Login
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        // POST: Users/Login
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(string username, string password)
+        {
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                ModelState.AddModelError("", "Username and password are required.");
+                return View();
+            }
+
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Username == username && u.Password == password);
+
+            if (user == null)
+            {
+                ModelState.AddModelError("", "Invalid username or password.");
+                return View();
+            }
+
+            // TODO: Implement user authentication, e.g., sign in the user and set a session or cookie
+            // For example, you can use ASP.NET Core Identity or any other authentication mechanism.
+
+            return RedirectToAction("MyCauses", "Home"); // Redirect the user to the desired page after successful login
+        }
+
         // GET: Users
         public async Task<IActionResult> Index()
         {
