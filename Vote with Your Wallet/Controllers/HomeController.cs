@@ -44,11 +44,12 @@ public class HomeController : Controller
     public IActionResult MyCauses()
     {
         var username = Request.Cookies["username"];
-        if(string.IsNullOrEmpty(username) )
+        var causes = _db.Causes.ToList();
+        if (string.IsNullOrEmpty(username) )
         {
             return RedirectToAction("Login");
         }
-        return View();
+        return View(causes);
     }
 
     public IActionResult NewUser()

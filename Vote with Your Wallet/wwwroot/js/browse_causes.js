@@ -1,31 +1,4 @@
-﻿
-
-// Mock data of causes
-/*let causes = [
-    {
-        title: "Stop Creative Tax Avoidance",
-        creator: "John Doe",
-        description: "This cause is to bring awareness to the issue of creative tax avoidance and encourage businesses to pay their fair share of taxes.",
-        signatures: 254,
-        dateCreated: "March 1, 2023"
-    },
-    {
-        title: "Fight for Fair Employment Practices",
-        creator: "Jane Smith",
-        description: "This cause is to raise awareness about unfair employment practices and encourage businesses to treat their employees with respect and dignity.",
-        signatures: 341,
-        dateCreated: "March 5, 2023"
-    },
-    {
-        title: "Demand Environmental Responsibility",
-        creator: "Sam Lee",
-        description: "This cause is to call attention to the environmental impact of businesses and demand that they take responsibility for their actions and reduce their carbon footprint.",
-        signatures: 157,
-        dateCreated: "March 8, 2023"
-    },
-];*/
-
-// Mock data of causes from database (JSON) 
+﻿// Mock data of causes from database (JSON) 
 let causes = causesData;
 console.log(causes);
 
@@ -40,13 +13,16 @@ var names = ["Emma Adams", "Oliver Alexander", "Sophia Allen", "Mason Anderson",
 // Displaying causes from the array
 function addCauses() {
     for (var i = 0; i < causes.length; i++) {
+        const date = new Date(causes[i].date);
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const dateCreated = date.toLocaleDateString('en-UK',options);
         target.append(
-            "<div id='cause-" + causes[i].id + "' style='border-radius: 5px; margin-bottom: 50px; background-color: #A9BDBD; padding: 10px; color: white'>" +
-            "<h1>Cause: " + causes[i].name + "</h1>" +
-            "<p>Creator: " + causes[i].userName + "</p>" +
+            "<div id='cause-" + causes[i].ID + "' style='border-radius: 5px; margin-bottom: 50px; background-color: #A9BDBD; padding: 10px; color: white'>" +
+            "<h1>Cause: " + causes[i].causeName + "</h1>" +
+            "<p>Creator: " + causes[i].username + "</p>" +
             "<p>Description: " + causes[i].description + "</p>" +
             "<p><span class='signature-toggle'>Signatures: " + "</span><span class='signature-list'><ul class=\"listTest\">" + "</ul></span></p>" +
-            "<p>Date Created: " + causes[i].date + "</p>" +
+            "<p>Date Created: " + dateCreated + "</p>" +
             "<div class='d-flex justify-content-between align-items-center'>" +
             "<button type=\"button\" class= \"btn btn-primary\" onclick=\"signCause(" + i + ")\">Sign<\/button>" +
             "<div class='d-flex flex-row-reverse'>" +

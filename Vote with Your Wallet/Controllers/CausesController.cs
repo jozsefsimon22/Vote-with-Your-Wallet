@@ -47,7 +47,6 @@ namespace Vote_with_Your_Wallet.Controllers
         // GET: Causes/Create
         public IActionResult Create()
         {
-            ViewData["Username"] = new SelectList(_context.Users, "Username", "Username");
             return View();
         }
 
