@@ -1,37 +1,34 @@
-﻿@{
+﻿@model Vote_with_Your_Wallet.Models.Cause
+@{
     ViewData["Title"] = "Create Causes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="~/css/create_cause.css">
-</head>
-<body>
+@using (Html.BeginForm("Create", "Causes", FormMethod.Post))
+{
+    
+    @Html.AntiForgeryToken()
+
     <div id="form_box">
         <div class="text-center">
             <h1>Create Causes</h1>
             <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         </div>
-        <form method="post">
-            <div class="mb-3">
-                <label for="Cause">Cause</label>
-                <input id="Cause" class="form-control" />
+            <div class="form-group">
+                @Html.LabelFor(model => model.CauseName, new { @class = "control-label" })
+                @Html.EditorFor(model => model.CauseName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CauseName, "", new { @class = "text-danger" })
             </div>
-            <div class="mb-3">
-                <label for="cause_description">Description</label>
+            <div class="form-group">
                 <div class="input-group">
-                    <textarea id="cause_description"
-                              class="form-control"
-                              aria-label="Cause Description"></textarea>
+                @Html.LabelFor(model => model.Description, new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
                 </div>
             </div>
             <button id="crt-btn" type="submit" class="btn btn-primary">Create</button>
-        </form>
     </div>
+}
 
 
-    <script src="~/js/create_cause.js"></script>
-</body>
-</html>
+    @*<script src="~/js/create_cause.js"></script>*@

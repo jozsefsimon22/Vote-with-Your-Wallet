@@ -28,6 +28,11 @@ public class HomeController : Controller
 
     public IActionResult CreateCause()
     {
+        var username = Request.Cookies["username"];
+        if (string.IsNullOrEmpty(username))
+        {
+            return RedirectToAction("Login");
+        }
         return View();
     }
 

@@ -46,7 +46,7 @@ namespace Vote_with_Your_Wallet.Controllers
 
             // Set a cookie to remember the user
             var options = new Microsoft.AspNetCore.Http.CookieOptions();
-            options.Expires = DateTime.Now.AddSeconds(10);
+            options.Expires = DateTime.Now.AddMinutes(1);
             Response.Cookies.Append("Username", user.Username, options);
 
             Console.WriteLine(Request.Cookies.ToString());
