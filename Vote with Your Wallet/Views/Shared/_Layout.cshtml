@@ -35,12 +35,27 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="MyCauses">My Causes</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <a class="btn btn-primary my-2 my-sm-0" asp-area="" asp-controller="Home" asp-action="Login">Login</a>&nbsp
-                    </form>
-                    <form class="d-flex">
-                        <a class="btn btn-secondary my-2 my-sm-0" asp-area="" asp-controller="Home" asp-action="NewUser">Register</a>
-                    </form>
+                        @{
+                            var username = Context.Request.Cookies["username"];
+                            if (!string.IsNullOrEmpty(username))
+							{
+                                <form class="d-flex">
+                                <a class="btn btn-info my-2 my-sm-0" asp-area="" asp-controller="Users" asp-action="Details" asp-route-id="@username">My Account</a>&nbsp
+                                </form>
+                                <form class="d-flex">
+                                <a class="btn btn-danger my-2 my-sm-0" asp-area="" asp-controller="Users" asp-action="Logout">Logout</a>
+                                </form>
+                            }
+                            else
+                            {
+                                <form class="d-flex">
+                                    <a class="btn btn-primary my-2 my-sm-0" asp-area="" asp-controller="Home" asp-action="Login">Login</a>&nbsp
+                                </form>
+                                <form class="d-flex">
+                                    <a class="btn btn-secondary my-2 my-sm-0" asp-area="" asp-controller="Home" asp-action="NewUser">Register</a>
+                                </form>
+                            }
+                        }
                 </div>
             </div>
         </nav>

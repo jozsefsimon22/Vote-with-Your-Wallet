@@ -6,12 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Vote_with_Your_Wallet.Models;
+using Vote_with_Your_Wallet.Views.Users;
 
 namespace Vote_with_Your_Wallet.Controllers
 {
     public class UsersController : Controller
     {
         private readonly MyDbContext _context;
+        private async Task<bool> IsUserAdmin(string userId)
+        {
+            var loggedInUser = await _context.Users.FirstOrDefaultAsync(m => m.Username == Request.Cookies["username"]);
+
+            return loggedInUser != null && loggedInUser.IsAdmin;
+        }
+
 
         public UsersController(MyDbContext context)
         {
@@ -53,6 +61,13 @@ namespace Vote_with_Your_Wallet.Controllers
             return RedirectToAction("MyCauses", "Home"); // Redirect the user to the desired page after successful login
         }
 
+        // GET: Users/Logout
+        public IActionResult Logout()
+        {
+            Response.Cookies.Delete("Username");
+            return RedirectToAction("Index", "Home");
+        }
+
         // GET: Users
         public async Task<IActionResult> Index()
         {
@@ -75,6 +90,14 @@ namespace Vote_with_Your_Wallet.Controllers
             {
                 return NotFound();
             }
+
+            var isAdmin = await IsUserAdmin(user.Username);
+
+            var viewModel = new UserDetailsViewModel
+            {
+                User = user,
+                IsAdmin = isAdmin
+            };
 
             return View(user);
         }

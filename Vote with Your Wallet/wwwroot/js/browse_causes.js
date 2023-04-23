@@ -93,38 +93,60 @@ function addNewName() {
 
 function signCause(index) {
     console.log('signCause called');
-    if (!search_input.val()) {
-        if ($(".listTest").is(":visible")) {
-            // The toggle is on (visible)
-            causes[index].signatures++;
-            addNewName();
-            target.empty();
-            addCauses();
-            $(".listTest").toggle();
-        } else {
-            // The toggle is off (hidden)
-            causes[index].signatures++;
-            addNewName();
-            target.empty();
-            addCauses();
-        }
+    var newSignature = {
+        CauseId: index,
+        Username: username,
     }
-    else {
-        if ($(".listTest").is(":visible")) {
-            // The toggle is on (visible)
-            causes[index].signatures++;
-            addNewName();
-            target.empty();
-            search();
-            $(".listTest").toggle();
-        } else {
-            // The toggle is off (hidden)
-            causes[index].signatures++;
-            addNewName();
-            target.empty();
-            search();
+
+    console.log(newSignature);
+
+    $.ajax({
+        url: "/Signatures/Create",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(newSignature),
+        success: function (response) {
+            if (response.success) {
+                /*if (!search_input.val()) {
+                    if ($(".listTest").is(":visible")) {
+                        // The toggle is on (visible)
+                        causes[index].signatures++;
+                        addNewName();
+                        target.empty();
+                        addCauses();
+                        $(".listTest").toggle();
+                    } else {
+                        // The toggle is off (hidden)
+                        causes[index].signatures++;
+                        addNewName();
+                        target.empty();
+                        addCauses();
+                    }
+                }
+                else {
+                    if ($(".listTest").is(":visible")) {
+                        // The toggle is on (visible)
+                        causes[index].signatures++;
+                        addNewName();
+                        target.empty();
+                        search();
+                        $(".listTest").toggle();
+                    } else {
+                        // The toggle is off (hidden)
+                        causes[index].signatures++;
+                        addNewName();
+                        target.empty();
+                        search();
+                    }
+                }*/
+            } else {
+                console.log("Error adding signature");
+            }
+        },
+        error: function () {
+            console.log("Error adding signature");
         }
-    }
+    });
 }
 
 // Calling functions 

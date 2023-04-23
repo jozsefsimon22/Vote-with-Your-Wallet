@@ -9,8 +9,10 @@ namespace Vote_with_Your_Wallet.Models
         public int ID { get; set; }
         [ForeignKey("User")]
         public string Username { get; set; }
+        [Required]
         public User User { get; set; }
         public int CauseId { get; set; }
+        [Required]
         public Cause Cause { get; set; }
     }
 }

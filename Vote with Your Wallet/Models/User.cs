@@ -20,6 +20,8 @@ namespace Vote_with_Your_Wallet.Models
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
+        [Required]
+        public bool IsAdmin { get; set; }
 
     }
 }
