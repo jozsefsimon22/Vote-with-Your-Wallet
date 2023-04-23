@@ -78,7 +78,7 @@
         <h1>Browse Causes</h1>
     </div>
     <div>
-        <input id="search-input" class="form-control me-sm-2" type="search" placeholder="SEARCH" />
+    <input id="search-input" class="form-control me-sm-2" type="search" placeholder="SEARCH" oninput="searchCauses()" />
     </div>
 <div id="causes-list">
     @{
@@ -86,7 +86,7 @@
     }
     @foreach (var causeWithSignatures in Model)
     {
-        <div id="@("cause-" + i)" style="border-radius: 5px; margin-top: 50px; background-color: #A9BDBD; padding: 10px; color: white">
+        <div id="@("cause-" + i)" class="cause-item" style="border-radius: 5px; margin-top: 50px; background-color: #A9BDBD; padding: 10px; color: white">
             <h1>Cause: @causeWithSignatures.Cause.CauseName</h1>
             <p>Creator: @causeWithSignatures.Cause.User.FirstName @causeWithSignatures.Cause.User.LastName</p>
             <p>Description: @causeWithSignatures.Cause.Description</p>
@@ -119,46 +119,21 @@
 </div>
 
 
-<script src="/js/browse_causes.js"></script>
+<script 
+function searchCauses() {
+    const searchInput = document.getElementById("search-input");
+    const searchValue = searchInput.value.toUpperCase();
+    const causesList = document.getElementById("causes-list");
+    const causes = causesList.getElementsByClassName("cause-item");
 
+    for (let i = 0; i < causes.length; i++) {
+        const causeTitle = causes[i].querySelector("h1");
+        const causeText = causeTitle.textContent || causeTitle.innerText;
 
-@*<table class="table">
-    <thead>
-        <tr>
-            <th>Cause Name</th>
-            <th>Description</th>
-            <th>Date</th>
-            <th>Creator</th>
-            <th>Signatures</th>
-            <th>Signers</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var causeWithSignatures in Model)
-        {
-            <tr>
-                <td>@causeWithSignatures.Cause.CauseName</td>
-                <td>@causeWithSignatures.Cause.Description</td>
-                <td>@causeWithSignatures.Cause.Date.ToShortDateString()</td>
-                <td>@causeWithSignatures.Cause.User.FirstName @causeWithSignatures.Cause.User.LastName</td>
-                <td>@causeWithSignatures.SignaturesCount</td>
-                <td>
-                    <ul>
-                        @foreach (var signer in causeWithSignatures.SignerNames)
-                        {
-                            <li>@signer</li>
-                        }
-                    </ul>
-                </td>
-                <td>
-                    <form asp-controller="Causes" asp-action="SignCause" method="post">
-                        <input type="hidden" name="causeId" value="@causeWithSignatures.Cause.ID" />
-                        <input type="hidden" name="username" value="@Context.Request.Cookies["Username"]" />
-                        <button type="submit" class="btn btn-primary">Sign</button>
-                    </form>
-                </td>
-            </tr>
+        if (causeText.toUpperCase().indexOf(searchValue) > -1) {
+            causes[i].style.display = "";
+        } else {
+            causes[i].style.display = "none";
         }
-    </tbody>
-</table>*@
+    }    
+</script>

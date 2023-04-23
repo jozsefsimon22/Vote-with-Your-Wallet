@@ -62,9 +62,9 @@ namespace Vote_with_Your_Wallet.Controllers
             Console.WriteLine(Request.Cookies.ToString());
             if(user.IsAdmin)
             {
-                return RedirectToAction("Index", "Admin");
+                return RedirectToAction("Index", "Admin"); // Redirect the user to the Admin Dashboard after successful login if teh user is admin
             }
-            return RedirectToAction("MyCauses", "Home"); // Redirect the user to the MyCauses after successful login
+            return RedirectToAction("BrowseCauses", "Causes"); // Redirect the user to the CausesList after successful login
         }
 
         // GET: Users/Logout

@@ -1,45 +1,5 @@
-﻿// Define a list of users with usernames and passwords
-var users = [
-    {
-        username: "admin@admin.com",
-        password: "admin"
-    },
-    {
-        username: "nex.simon@gmail.com",
-        password: "12345"
-    }
-];
+﻿console.log('login.js loaded');
 
-// Making the array accessible from other files
-module.exports = users;
-
-// Attach an event listener to the login button
-$("#login-btn").click(function (event) {
-    event.preventDefault(); // Prevent the form from submitting
-
-    // Get the values of the username and password input fields
-    var username = $("#username").val();
-    var password = $("#password").val();
-
-    // Loop through the list of users to check if the username and password match
-    var isValidUser = false;
-    for (var i = 0; i < users.length; i++) {
-        console.log("User " + i + ": " + users[i].username + " / " + users[i].password);
-        if (users[i].username === username && users[i].password === password) {
-            isValidUser = true;
-            break;
-        }
-    }
-
-    // Display an alert message based on whether the login was successful
-    if (isValidUser) {
-        alert("Login successful!");
-    } else {
-        alert("Invalid username or password.");
-    }
-});
-
-// Redirect the user to the register page when the register button is clicked
-$(".register-btn").click(function () {
-    window.location.href = "/NewUser.cshtml";
+document.addEventListener('DOMContentLoaded', function () {
+    alert('Hello World!');
 });

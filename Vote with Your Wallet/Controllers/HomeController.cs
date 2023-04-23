@@ -41,17 +41,6 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult MyCauses()
-    {
-        var username = Request.Cookies["username"];
-        var causes = _db.Causes.ToList();
-        if (string.IsNullOrEmpty(username) )
-        {
-            return RedirectToAction("Login");
-        }
-        return View(causes);
-    }
-
     public IActionResult NewUser()
     {
         return View();

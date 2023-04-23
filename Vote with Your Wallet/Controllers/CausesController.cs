@@ -19,11 +19,13 @@ namespace Vote_with_Your_Wallet.Controllers
             _context = context;
         }
 
-        // GET: Causes
-        public async Task<IActionResult> CausesList()
+        // GET: Causes/BrowseCauses
+        public async Task<IActionResult> BrowseCauses()
         {
+            var currentUsername = Request.Cookies["username"];
             var causesWithSignatures = await _context.Causes
                 .Include(c => c.User)
+                .Where(c => c.User.Username != currentUsername) // Show all causes except the current user's
                 .Select(c => new CauseWithSignaturesViewModel
                 {
                     Cause = c,
@@ -32,8 +34,38 @@ namespace Vote_with_Your_Wallet.Controllers
                 })
                 .ToListAsync();
 
-            return View(causesWithSignatures);
+            return View("CausesList", causesWithSignatures);
         }
+
+        // GET: Causes/MyCausesList
+        public async Task<IActionResult> MyCausesList()
+        {
+            var currentUsername = Request.Cookies["username"];
+            var causesWithSignatures = await _context.Causes
+                .Include(c => c.User)
+                .Where(c => c.User.Username == currentUsername) // Show only the current user's causes
+                .Select(c => new CauseWithSignaturesViewModel
+                {
+                    Cause = c,
+                    SignaturesCount = _context.Signatures.Count(s => s.CauseId == c.ID),
+                    SignerNames = _context.Signatures.Where(s => s.CauseId == c.ID).Select(s => s.User.FirstName + " " + s.User.LastName).ToList()
+                })
+                .ToListAsync();
+            if (string.IsNullOrEmpty(currentUsername))
+            {
+                return RedirectToAction("Login", "Home");
+            }
+
+            return View("CausesList", causesWithSignatures);
+        }
+
+
+        // GET: Causes/Index
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Causes.ToListAsync());
+        }
+
 
         // GET: Causes/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -208,7 +240,7 @@ namespace Vote_with_Your_Wallet.Controllers
 
             if (existingSignature != null)
             {
-                // User has already signed the cause, display an error or redirect as needed
+                // User has already signed the cause
                 return RedirectToAction("CausesList", "Causes"); // Redirect back to the causes list as an example
             }
 
