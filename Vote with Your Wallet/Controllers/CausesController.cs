@@ -241,7 +241,7 @@ namespace Vote_with_Your_Wallet.Controllers
             if (existingSignature != null)
             {
                 // User has already signed the cause
-                return RedirectToAction("CausesList", "Causes"); // Redirect back to the causes list as an example
+                return RedirectToAction("BrowseCauses", "Causes");
             }
 
             var signature = new Signatures
@@ -255,7 +255,7 @@ namespace Vote_with_Your_Wallet.Controllers
             _context.Signatures.Add(signature);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("CausesList", "Causes");
+            return RedirectToAction("BrowseCauses", "Causes");
         }
 
 
