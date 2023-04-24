@@ -1,0 +1,134 @@
+﻿@model IEnumerable<Vote_with_Your_Wallet.ViewModels.CauseWithSignaturesViewModel>
+
+
+@{
+    ViewData["Title"] = "Causes";
+}
+
+    
+    <style>
+    /* Define variables */
+    :root {
+        --color-primary: #A9BDBD;
+        --color-secondary: white;
+    }
+
+    /* Apply CSS reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Style search input */
+    #search-input {
+        padding: 30px;
+        margin: 40px 0;
+        border: solid var(--color-secondary) 1px;
+        border-radius: 5px;
+        height: 20px;
+        text-align: center;
+        color: var(--color-primary);
+    }
+
+    /* Style causes section */
+    #causes {
+        margin: 50px 0 20px;
+        border-radius: 5px;
+        background-color: var(--color-primary);
+        padding: 10px;
+        color: var(--color-secondary);
+    }
+
+
+    /* Style font awesome icons */
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }
+
+        .fa:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        .signer-names {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+        .signer-names ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .signer-names li {
+            display: inline;
+            margin-right: 5px;
+        }
+    </style>
+
+    <div class="text-center">
+        <h1>Browse Causes</h1>
+    </div>
+
+<!-- Search input with an event handler for user input -->
+    <div>
+    <input id="search-input" class="form-control me-sm-2" type="search" placeholder="SEARCH" oninput="searchCauses()" />
+    </div>
+
+<!-- Causes section -->
+<div id="causes-list">
+    @{
+        int i = 0; // Counter for assigning unique IDs to each cause
+    }
+
+    <!-- Loop through each cause with its signatures in the Model -->
+    @foreach (var causeWithSignatures in Model)
+    {
+        <!-- Display cause details with a unique ID and styling -->
+        <div id="@("cause-" + i)" class="cause-item" style="border-radius: 5px; margin-top: 50px; background-color: #A9BDBD; padding: 10px; color: white">
+            <h1>Cause: @causeWithSignatures.Cause.CauseName</h1>
+            <p>Creator: @causeWithSignatures.Cause.User.FirstName @causeWithSignatures.Cause.User.LastName</p>
+            <p>Description: @causeWithSignatures.Cause.Description</p>
+            <p>Signatures: @causeWithSignatures.SignaturesCount</p>
+
+            <!-- List of signers for the cause -->
+            <div class="signer-names">
+                <p><strong>Signers:</strong></p>
+                <ul>
+                    @foreach (var signerName in causeWithSignatures.SignerNames)
+                    {
+                        <li>@signerName</li>
+                    }
+                </ul>
+            </div>
+
+
+            <p>Date Created: @causeWithSignatures.Cause.Date.ToShortDateString()</p>
+
+             <!-- Sign button and sharing options -->
+            <div class="d-flex justify-content-between align-items-center">
+                <form asp-controller="Causes" asp-action="SignCause" method="post">
+                    <input type="hidden" name="causeId" value="@causeWithSignatures.Cause.ID" />
+                    <input type="hidden" name="username" value="@Context.Request.Cookies["Username"]" />
+                    <button type="submit" class="btn btn-primary">Sign</button>
+                </form>
+
+                 <!-- Social media sharing icons -->
+                <div class="d-flex flex-row-reverse">
+                    <i class="fa fa-facebook" onclick="shareFacebook()"></i>&nbsp;
+                    <i class="fa fa-twitter" onclick="shareTwitter()"></i>&nbsp;
+                    <i class="fa fa-linkedin" onclick="shareLinkedIn()"></i>
+                </div>
+            </div>
+        </div>
+        i++; // Increment the counter for the next cause
+    }
+</div>
+
+<script src="~/js/browse_causes.js"></script>

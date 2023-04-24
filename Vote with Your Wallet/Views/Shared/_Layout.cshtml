@@ -6,11 +6,8 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    @*<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />*@
     <link rel="stylesheet" href="~/Vote_with_Your_Wallet.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 </head>
 <body>
     <header>
@@ -26,28 +23,53 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="BrowseCause">Browse Causes</a>
+                            <a class="nav-link" asp-area="" asp-controller="Causes" asp-action="BrowseCauses">Browse Causes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="CreateCause">Create a Cause</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="MyCauses">My Causes</a>
+                            <a class="nav-link" asp-area="" asp-controller="Causes" asp-action="MyCausesList">My Causes</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <a class="btn btn-primary my-2 my-sm-0" asp-area="" asp-controller="Home" asp-action="Login">Login</a>&nbsp
-                    </form>
-                    <form class="d-flex">
-                        <a class="btn btn-secondary my-2 my-sm-0" asp-area="" asp-controller="Home" asp-action="NewUser">Register</a>
-                    </form>
+                        @{
+                            var username = Context.Request.Cookies["username"];
+                            bool.TryParse(Context.Request.Cookies["Admin"], out bool isAdmin);
+                            if (!string.IsNullOrEmpty(username))
+							{
+                                
+                                if(isAdmin)
+								{
+									<form class="d-flex">
+									<a class="btn btn-warning my-2 my-sm-0" asp-area="" asp-controller="Admin" asp-action="Index">Admin Dashboard</a>&nbsp
+									</form>
+								}
+                                else{
+                                    <form class="d-flex">
+                                    <a class="btn btn-info my-2 my-sm-0" asp-area="" asp-controller="Users" asp-action="Details" asp-route-id="@username">My Account</a>&nbsp
+                                    </form>
+                                }
+                                <form class="d-flex">
+                                <a class="btn btn-danger my-2 my-sm-0" asp-area="" asp-controller="Users" asp-action="Logout">Logout</a>
+                                </form>
+                            }
+                            else
+                            {
+                                <form class="d-flex">
+                                    <a class="btn btn-primary my-2 my-sm-0" asp-area="" asp-controller="Home" asp-action="Login">Login</a>&nbsp
+                                </form>
+                                <form class="d-flex">
+                                    <a class="btn btn-secondary my-2 my-sm-0" asp-area="" asp-controller="Home" asp-action="NewUser">Register</a>
+                                </form>
+                            }
+                        }
                 </div>
             </div>
         </nav>
 
     </header>
     <div class="container">
-        <main role="main" >
+        <main role="main">
             @RenderBody()
         </main>
     </div>

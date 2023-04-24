@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\nexsi\OneDrive - Edinburgh Napier University\MSc Computing\Modules\Trimester 2\SET11105 - Programming for the Web\Coursework\Coursework 2\Vote with Your Wallet\Vote with Your Wallet
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Causes/CausesList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F1c2VzXENhdXNlc0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Causes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F1c2VzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,10 +44,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F1c2VzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Home/BrowseCause.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCcm93c2VDYXVzZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Home/CreateCause.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVDYXVzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,10 +56,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Home/MyCauses.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNeUNhdXNlcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Home/NewUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +66,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Signatures/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmF0dXJlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Signatures/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmF0dXJlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Signatures/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmF0dXJlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Signatures/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmF0dXJlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Signatures/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmF0dXJlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nexsi/OneDrive - Edinburgh Napier University/MSc Computing/Modules/Trimester 2/SET11105 - Programming for the Web/Coursework/Coursework 2/Vote with Your Wallet/Vote with Your Wallet/Views/Users/Create.cshtml]
