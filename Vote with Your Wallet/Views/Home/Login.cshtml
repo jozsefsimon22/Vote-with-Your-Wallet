@@ -1,28 +1,32 @@
 ﻿@model Vote_with_Your_Wallet.Models.User
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!-- Begin the form for user login -->
 @using (Html.BeginForm("Login", "Users", FormMethod.Post))
 {
+    // Include anti-forgery token to prevent CSRF attacks
     @Html.AntiForgeryToken()
 
     <div class="container login">
-
         <div class="login-box">
             <h1 class="mb-4">Login</h1>
+            <!-- Input field for Username -->
             <div class="form-group">
                 @Html.LabelFor(model => model.Username, new { @class = "control-label" })
                 @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
             </div>
+            <!-- Input field for Password -->
             <div class="form-group">
                 @Html.LabelFor(model => model.Password, new { @class = "control-label" })
                 @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
             </div>
             <br>
+            <!-- Login button to submit the form -->
             <button id="login-btn" type="submit" class="btn btn-primary login-btn">Login</button>
         </div>
     </div>

@@ -70,27 +70,34 @@
             display: inline;
             margin-right: 5px;
         }
-
-
     </style>
 
     <div class="text-center">
         <h1>Browse Causes</h1>
     </div>
+
+<!-- Search input with an event handler for user input -->
     <div>
     <input id="search-input" class="form-control me-sm-2" type="search" placeholder="SEARCH" oninput="searchCauses()" />
     </div>
+
+<!-- Causes section -->
 <div id="causes-list">
     @{
-        int i = 0;
+        int i = 0; // Counter for assigning unique IDs to each cause
     }
+
+    <!-- Loop through each cause with its signatures in the Model -->
     @foreach (var causeWithSignatures in Model)
     {
+        <!-- Display cause details with a unique ID and styling -->
         <div id="@("cause-" + i)" class="cause-item" style="border-radius: 5px; margin-top: 50px; background-color: #A9BDBD; padding: 10px; color: white">
             <h1>Cause: @causeWithSignatures.Cause.CauseName</h1>
             <p>Creator: @causeWithSignatures.Cause.User.FirstName @causeWithSignatures.Cause.User.LastName</p>
             <p>Description: @causeWithSignatures.Cause.Description</p>
             <p>Signatures: @causeWithSignatures.SignaturesCount</p>
+
+            <!-- List of signers for the cause -->
             <div class="signer-names">
                 <p><strong>Signers:</strong></p>
                 <ul>
@@ -100,13 +107,19 @@
                     }
                 </ul>
             </div>
+
+
             <p>Date Created: @causeWithSignatures.Cause.Date.ToShortDateString()</p>
+
+             <!-- Sign button and sharing options -->
             <div class="d-flex justify-content-between align-items-center">
                 <form asp-controller="Causes" asp-action="SignCause" method="post">
                     <input type="hidden" name="causeId" value="@causeWithSignatures.Cause.ID" />
                     <input type="hidden" name="username" value="@Context.Request.Cookies["Username"]" />
                     <button type="submit" class="btn btn-primary">Sign</button>
                 </form>
+
+                 <!-- Social media sharing icons -->
                 <div class="d-flex flex-row-reverse">
                     <i class="fa fa-facebook" onclick="shareFacebook()"></i>&nbsp;
                     <i class="fa fa-twitter" onclick="shareTwitter()"></i>&nbsp;
@@ -114,26 +127,8 @@
                 </div>
             </div>
         </div>
-        i++;
+        i++; // Increment the counter for the next cause
     }
 </div>
 
-
-<script 
-function searchCauses() {
-    const searchInput = document.getElementById("search-input");
-    const searchValue = searchInput.value.toUpperCase();
-    const causesList = document.getElementById("causes-list");
-    const causes = causesList.getElementsByClassName("cause-item");
-
-    for (let i = 0; i < causes.length; i++) {
-        const causeTitle = causes[i].querySelector("h1");
-        const causeText = causeTitle.textContent || causeTitle.innerText;
-
-        if (causeText.toUpperCase().indexOf(searchValue) > -1) {
-            causes[i].style.display = "";
-        } else {
-            causes[i].style.display = "none";
-        }
-    }    
-</script>
+<script src="~/js/browse_causes.js"></script>

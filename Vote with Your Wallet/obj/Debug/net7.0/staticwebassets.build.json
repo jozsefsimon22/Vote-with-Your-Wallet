@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eTSigLL73i8gFEFd/AigBDkEB3KxCdUXDCONPkvzPAA=",
+  "Hash": "J2PMsYo/yPXEa068/JuBLkU68dgCn7n+AVg+3UtjibA=",
   "Source": "Vote with Your Wallet",
   "BasePath": "_content/Vote with Your Wallet",
   "Mode": "Default",
@@ -185,23 +185,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\browse_causes.js"
-    },
-    {
-      "Identity": "C:\\Users\\nexsi\\OneDrive - Edinburgh Napier University\\MSc Computing\\Modules\\Trimester 2\\SET11105 - Programming for the Web\\Coursework\\Coursework 2\\Vote with Your Wallet\\Vote with Your Wallet\\wwwroot\\js\\create_cause.js",
-      "SourceId": "Vote with Your Wallet",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\nexsi\\OneDrive - Edinburgh Napier University\\MSc Computing\\Modules\\Trimester 2\\SET11105 - Programming for the Web\\Coursework\\Coursework 2\\Vote with Your Wallet\\Vote with Your Wallet\\wwwroot\\",
-      "BasePath": "_content/Vote with Your Wallet",
-      "RelativePath": "js/create_cause.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\create_cause.js"
     },
     {
       "Identity": "C:\\Users\\nexsi\\OneDrive - Edinburgh Napier University\\MSc Computing\\Modules\\Trimester 2\\SET11105 - Programming for the Web\\Coursework\\Coursework 2\\Vote with Your Wallet\\Vote with Your Wallet\\wwwroot\\js\\site.js",

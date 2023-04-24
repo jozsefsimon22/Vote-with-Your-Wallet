@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,18 +10,21 @@ using Vote_with_Your_Wallet.Models;
 
 namespace Vote_with_Your_Wallet.Controllers
 {
+    // Define the route and specify that this is an API controller
     [Route("api/[controller]")]
     [ApiController]
     public class SignaturesController : Controller
     {
         private readonly MyDbContext _context;
 
+        // Constructor to initialize the database context
         public SignaturesController(MyDbContext context)
         {
             _context = context;
         }
 
         // GET: Signatures
+        // Get a list of all signatures
         public async Task<IActionResult> Index()
         {
             var myDbContext = _context.Signatures.Include(s => s.Cause).Include(s => s.User);
@@ -28,6 +32,7 @@ namespace Vote_with_Your_Wallet.Controllers
         }
 
         // GET: Signatures/Details/5
+        // Get details of a specific signature
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Signatures == null)
@@ -48,16 +53,14 @@ namespace Vote_with_Your_Wallet.Controllers
         }
 
         // GET: Signatures/Create
+        // Render the Create Signature view
         public IActionResult Create()
         {
-           /* ViewData["CauseId"] = new SelectList(_context.Causes, "ID", "CauseName");
-            ViewData["Username"] = new SelectList(_context.Users, "Username", "Username");*/
             return View();
         }
 
         // POST: Signatures/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // Create a new signature
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Route("Create")]
@@ -76,6 +79,7 @@ namespace Vote_with_Your_Wallet.Controllers
         }
 
         // GET: Signatures/Edit/5
+        // Render the Edit Signature view for a specific signature
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Signatures == null)
@@ -94,8 +98,7 @@ namespace Vote_with_Your_Wallet.Controllers
         }
 
         // POST: Signatures/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // Update a specific signature
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,Username,CauseId")] Signatures signatures)
@@ -131,6 +134,7 @@ namespace Vote_with_Your_Wallet.Controllers
         }
 
         // GET: Signatures/Delete/5
+        // Render the Delete Signature confirmation view for a specific signature
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Signatures == null)
@@ -151,6 +155,7 @@ namespace Vote_with_Your_Wallet.Controllers
         }
 
         // POST: Signatures/Delete/5
+        // Delete a specific signature after confirmation
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
